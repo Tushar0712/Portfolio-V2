@@ -1,0 +1,62 @@
+/* Projects.css */
+.projects-container {
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  max-width: 1200px; /* Increased max-width for more columns on larger screens */
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center; /* Center aligns title */
+}
+
+.projects-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  background: var(--bg-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projects-list {
+  display: grid; /* Changed to CSS Grid for better control */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 2rem; /* Consistent gap */
+  margin-top: 2rem;
+}
+
+/* No need for .projects-list > div {} anymore due to grid */
+
+/* Media Queries for Projects Page */
+@media (max-width: 992px) {
+  .projects-list {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(280px, 1fr)
+    ); /* Adjust for slightly smaller screens */
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+  .projects-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+  .projects-list {
+    grid-template-columns: 1fr; /* Stack projects vertically on small screens */
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 1rem;
+    margin: 1.5rem auto;
+  }
+}

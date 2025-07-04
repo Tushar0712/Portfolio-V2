@@ -1,0 +1,18 @@
+/* Footer.css */
+.footer {
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  padding: 1.5rem 0;
+  background: var(--bg-primary); /* Consistent background */
+  color: var(--text-secondary); /* Consistent text color */
+  font-size: 0.95rem; /* Slightly smaller font for footer */
+  margin-top: 4rem; /* More space above footer */
+  border-top: 1px solid rgba(0, 0, 0, 0.05); /* Subtle top border */
+}
+
+/* Dark mode adjustments for footer */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}

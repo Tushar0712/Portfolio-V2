@@ -1,0 +1,40 @@
+/* ProjectCard.css */
+.project-card {
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: var(--bg-primary); /* Use CSS variable */
+  border-radius: var(--border-radius); /* Use CSS variable */
+  box-shadow: var(--shadow-md); /* Consistent shadow */
+  padding: 2rem; /* Increased padding */
+  margin: 1rem 0;
+  transition: var(--transition); /* Consistent transition */
+  text-align: left;
+  display: flex; /* Use flex for layout within card */
+  flex-direction: column;
+  height: 100%; /* Ensure cards in a grid have equal height */
+  border: 1px solid var(--bg-secondary); /* Subtle border */
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.01); /* More pronounced hover effect */
+  box-shadow: var(--shadow-xl); /* Stronger shadow on hover */
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.8rem; /* Slightly larger title */
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0; /* Adjusted margins */
+  flex-grow: 1; /* Allows description to take up available space */
+  line-height: 1.7;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: auto; /* Pushes the link to the bottom of the card */
+  /* Styles are now primarily handled by .btn .btn-secondary in App.css */
+}

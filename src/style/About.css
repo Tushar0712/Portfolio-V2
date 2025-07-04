@@ -1,0 +1,131 @@
+/* About.css */
+.about-container {
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  max-width: 900px; /* Increased max-width for better content flow on larger screens */
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--bg-primary); /* Using CSS variable */
+  border-radius: var(--border-radius); /* Using CSS variable */
+  box-shadow: var(--shadow-md); /* Consistent shadow */
+  text-align: center; /* Center aligning content for a cleaner look */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Fluid font size */
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  background: var(--bg-gradient); /* Added gradient to title */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-text {
+  font-size: clamp(1rem, 2vw, 1.15rem); /* Fluid font size */
+  margin: 1rem auto 2rem auto;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 700px; /* Constrain text width for readability */
+}
+
+/* Optional: Photo styling if you add one */
+.about-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.about-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.about-section-title {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-size: clamp(1.5rem, 3vw, 2.2rem); /* Fluid font size */
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent-color); /* Subtle underline */
+  display: inline-block; /* To make border-bottom apply to text width */
+  padding-bottom: 0.5rem;
+}
+
+.about-skills {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow skills to wrap on smaller screens */
+  justify-content: center;
+  gap: 1rem; /* Spacing between skill items */
+  margin: 1.5rem auto 2rem auto;
+  max-width: 800px;
+}
+
+.about-skills li {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.about-skills li:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-bio {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  text-align: left; /* Align bio text to left */
+  max-width: 700px;
+  margin: 1.5rem auto 0 auto;
+}
+
+/* Media Queries for About Page */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+  .about-title {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+  .about-text,
+  .about-bio {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  }
+  .about-skills {
+    gap: 0.7rem;
+  }
+  .about-skills li {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1rem;
+    margin: 1.5rem auto;
+  }
+  .about-skills {
+    justify-content: flex-start; /* Align skills to left on very small screens */
+    gap: 0.5rem;
+  }
+}
