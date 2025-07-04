@@ -1,22 +1,24 @@
 🌟 Personal Portfolio Website
+
 This is a personal portfolio website built using React.js, Vite, and JavaScript. It showcases your skills, projects, and contact information with a clean and responsive design.
 
 🚀 Features
+
 Responsive and modern UI
 
 Fast build and development with Vite
 
 Multiple sections:
 
-Home
+-> Home
 
-About
+-> About
 
-Skills
+-> Skills
 
-Projects
+-> Projects
 
-Contact
+-> Contact
 
 Component-based architecture
 
